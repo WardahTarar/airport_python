@@ -10,5 +10,12 @@ def test_checks_for_empty_airport():
 def test_lands_plane():
   airport = Airport()
   plane = Plane()
-  airport.landing(plane)
+  airport.land(plane)
   assert airport.hangar == [plane]
+
+def test_takeoff_plane():
+  airport = Airport()
+  plane = Plane()
+  airport.land(plane)
+  airport.takeoff(plane)
+  assert airport.hangar == []
