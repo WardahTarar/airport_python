@@ -1,3 +1,6 @@
 class Airport:
   def __init__(self):
-    self.runway = []
+    self.hangar = []
+
+  def landing(self,plane):
+    self.hangar.append(plane)
